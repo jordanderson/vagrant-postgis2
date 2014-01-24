@@ -80,4 +80,5 @@ Vagrant::Config.run do |config|
     chef.add_role "vagrant-postgis2"
   end
 
+  config.vm.provision :shell, :path => "./add_pgrouting.sh"
 end
